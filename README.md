@@ -1,7 +1,7 @@
 # CounterSideDecryptor
 用於解密 未來戰 (Use to decrypt Counter:Side *.asset file)[2023ver.]
 
-本工具僅適用較近期的版本，花了比預想的還要更多的時間，il2cpp真是討厭的東西... (一堆C++混著C#的類，特別難搞)
+自用，改成了python版
 
 ## Usage
 把所有檔案放進exe目錄下的CounterSide目錄中，執行
