@@ -30,20 +30,14 @@ def decrypt_file(input_file, mask_list):
 
 
 def main(i_f):
-    output_folder = os.path.join(i_f, 'decrypted')
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
-
     for input_file in glob(os.path.join(i_f, '*.asset')):
         mask_list = generate_mask_list(input_file)
         decrypted_data = decrypt_file(input_file, mask_list)
-        output_file = os.path.join(output_folder, os.path.basename(input_file))
-        with open(output_file, 'wb') as f:
+        with open(input_file, 'wb') as f:   
             f.write(decrypted_data)
-        print(f'Decrypted: {input_file} -> {output_file}')
+        print(f'Decrypted: {input_file}')
 
 
 if __name__ == '__main__':
-    input_folder = '1'  # 改成你自己的输入文件夹路径
+    input_folder = 'Assetbundles'
     main(input_folder)
-
